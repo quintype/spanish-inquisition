@@ -5,4 +5,4 @@
 
 ![Monty Python - Spanish Inquisition](docs/spanish-inquisition.jpg)
 
-WebSockets based server to emit and forward events (backed by Redis + Primus + Engine.IO)
+WebSockets based server to emit and forward events (backed by RedisDB + Primus + Engine.IO)
