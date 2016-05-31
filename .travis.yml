@@ -1,0 +1,24 @@
+sudo: false
+language: node_js
+node_js:
+  - "4.4.4"
+compiler: clang-3.6
+env:
+  - CXX=clang-3.6
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.6
+      - ubuntu-toolchain-r-test
+    packages:
+      - clang-3.6
+      - g++-4.8
+branches:
+  except:
+    - gh-pages
+before_script:
+  - npm install -g gulp@3.9.1
+script:
+  - npm run coverage
+after_script:
+  - if [[ `node --version` == *v4.4.4* ]]; then cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js; fi

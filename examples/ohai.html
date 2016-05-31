@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="spanish-inquisition" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>ohai</title>
+</head>
+<body>
+<script type="text/javascript" src="primus.js"></script>
+<script type="text/javascript">
+  var primus = new Primus("http://localhost:10001/guilty");
+
+  primus.on("open", function () {
+    console.log("connection opened");
+    primus.write("heya");
+  });
+
+  primus.on("data", function (message) {
+    console.log("received", message);
+  });
+</script>
+</body>
+</html>

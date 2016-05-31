@@ -1,0 +1,10 @@
+instrumentation:
+  compact: false
+  save-baseline: true
+reporting:
+  reports:
+    - lcov
+  report-config:
+    - lcovonly
+    - clover
+    - cobertura
