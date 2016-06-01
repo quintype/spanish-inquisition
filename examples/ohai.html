@@ -8,17 +8,33 @@
   <title>ohai</title>
 </head>
 <body>
-<script type="text/javascript" src="primus.js"></script>
+<script type="text/javascript" src="http://localhost:10001/primus.js"></script>
 <script type="text/javascript">
   var primus = new Primus("http://localhost:10001/guilty");
 
+  primus.write("you can write directly, we will queue it");
+  primus.write("until the open event is called and flush it");
+
   primus.on("open", function () {
-    console.log("connection opened");
+    console.log("primus: connection established");
     primus.write("heya");
+  });
+
+  primus.on("reconnect", function () {
+    console.log("primus: reconnect event happened");
   });
 
   primus.on("data", function (message) {
     console.log("received", message);
+    console.log("primus: received data", message);
+  });
+
+  primus.on("error", function (err) {
+    console.log("primus: error event", err);
+  });
+
+  primus.on("end", function () {
+    console.log("primus: connection closed");
   });
 </script>
 </body>

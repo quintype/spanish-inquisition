@@ -2,18 +2,39 @@
 
 "use strict";
 
-var Path = require("path");
+var FS       = require("fs"),
+    mkdirp   = require("mkdirp"),
+    Path     = require("path"),
+    UglifyJS = require("uglifyjs");
 
 var SpanishInquisition = require("../lib/spanish_inquisition");
 
-try {
-  SpanishInquisition.init(Path.resolve(__dirname, "../", "examples/primus.js"), function () {
-    SpanishInquisition.server();
-  }, function (err) {
-    if (err) {
-      console.error(err);
-    }
-  });
-} catch (err) {
-  console.error(err);
-}
+var path = Path.resolve(__dirname, "../", "public/assets");
+
+mkdirp(path, function (error) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  try {
+    SpanishInquisition.init(function (server, primus) {
+      primus.save(path + "/primus.js", function (error) {
+        if (error) {
+          console.error(error);
+          return;
+        }
+        console.log("Wrote File: public/assets/primus.js");
+        FS.writeFile(path + "/primus.min.js", UglifyJS.minify(path + "/primus.js").code, function (error) {
+          if (error) {
+            console.error(error);
+            return;
+          }
+          console.log("Wrote File: public/assets/primus.min.js");
+        });
+      });
+      SpanishInquisition.server(server, primus);
+    });
+  } catch (err) {
+    console.error(err);
+  }
+});
