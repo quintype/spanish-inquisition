@@ -1,46 +1,49 @@
 {
-  "name": "spanish-inquisition",
-  "version": "0.0.1-SNAPSHOT",
-  "description": "WebSockets based server to emit and forward events (backed by Redis + Primus + Engine.IO)",
-  "main": "lib/spanish_inquisition.js",
-  "repository": {
+  "name"           : "spanish-inquisition",
+  "version"        : "0.0.1-SNAPSHOT",
+  "description"    : "WebSockets based server to emit and forward events (backed by Redis + Primus + Engine.IO)",
+  "main"           : "lib/spanish_inquisition.js",
+  "repository"     : {
     "type": "git",
-    "url": "git://github.com/quintype/spanish-inquisition.git"
+    "url" : "git://github.com/quintype/spanish-inquisition.git"
   },
-  "scripts": {
-    "test": "npm run tests",
-    "gulp": "./node_modules/.bin/gulp",
-    "lint": "./node_modules/.bin/gulp lint",
-    "tests": "./node_modules/.bin/mocha",
+  "scripts"        : {
+    "test"    : "npm run tests",
+    "gulp"    : "./node_modules/.bin/gulp",
+    "lint"    : "./node_modules/.bin/gulp lint",
+    "tests"   : "./node_modules/.bin/mocha",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
-  "keywords": [
+  "keywords"       : [
     "quintype",
     "spanish-inquisition",
     "event-server",
     "websockets",
     "redis"
   ],
-  "author": "Quintype Developers <dev-core@quintype.com>",
-  "license": "MIT",
-  "dependencies": {
-    "engine.io": "~1.6.9",
-    "express": "~4.13.4",
-    "lodash": "~4.13.1",
-    "primus": "~5.2.1"
+  "author"         : "Quintype Developers <dev-core@quintype.com>",
+  "license"        : "MIT",
+  "dependencies"   : {
+    "engine.io"    : "~1.6.9",
+    "express"      : "~4.13.4",
+    "ioredis"      : "~2.0.1",
+    "lodash"       : "~4.13.1",
+    "metroplex"    : "~1.0.0",
+    "omega-supreme": "~1.0.0",
+    "primus"       : "~5.2.1"
   },
   "devDependencies": {
-    "coveralls": "~2.11.9",
-    "gulp": "~3.9.1",
-    "gulp-jscs": "~3.0.2",
-    "gulp-jshint": "~2.0.1",
-    "istanbul": "~0.4.3",
-    "jscs": "~3.0.3",
-    "jshint": "~2.9.2",
+    "coveralls"     : "~2.11.9",
+    "gulp"          : "~3.9.1",
+    "gulp-jscs"     : "~3.0.2",
+    "gulp-jshint"   : "~2.0.1",
+    "istanbul"      : "~0.4.3",
+    "jscs"          : "~3.0.3",
+    "jshint"        : "~2.9.2",
     "jshint-stylish": "~2.2.0",
-    "mkdirp": "^0.5.1",
-    "mocha": "~2.5.3",
-    "should": "~9.0.0",
-    "uglifyjs": "~2.4.10"
+    "mkdirp"        : "~0.5.1",
+    "mocha"         : "~2.5.3",
+    "should"        : "~9.0.0",
+    "uglifyjs"      : "~2.4.10"
   }
 }
