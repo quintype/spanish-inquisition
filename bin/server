@@ -2,8 +2,8 @@
 
 "use strict";
 
-var FS       = require("fs"),
-    mkdirp   = require("mkdirp"),
+var mkdirp   = require("mkdirp"),
+    FS       = require("fs"),
     Path     = require("path"),
     UglifyJS = require("uglifyjs");
 

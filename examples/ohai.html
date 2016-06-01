@@ -8,9 +8,9 @@
   <title>ohai</title>
 </head>
 <body>
-<script type="text/javascript" src="http://localhost:10001/primus.js"></script>
+<script type="text/javascript" src="http://localhost:10001/assets/primus.js"></script>
 <script type="text/javascript">
-  var primus = new Primus("http://localhost:10001/guilty");
+  var primus = new Primus("ws://localhost:10001/guilty");
 
   primus.write("you can write directly, we will queue it");
   primus.write("until the open event is called and flush it");
