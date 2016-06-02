@@ -24,13 +24,15 @@
   "author"         : "Quintype Developers <dev-core@quintype.com>",
   "license"        : "MIT",
   "dependencies"   : {
-    "engine.io"    : "~1.6.9",
-    "express"      : "~4.13.4",
-    "ioredis"      : "~2.0.1",
-    "lodash"       : "~4.13.1",
-    "metroplex"    : "~1.0.0",
-    "omega-supreme": "~1.0.0",
-    "primus"       : "~5.2.1"
+    "engine.io"       : "~1.6.9",
+    "express"         : "~4.13.4",
+    "lodash"          : "~4.13.1",
+    "primus"          : "~5.2.1",
+    "primus-cluster"  : "~1.1.0",
+    "primus-emitter"  : "~3.1.1",
+    "primus-multiplex": "~3.2.0",
+    "primus-rooms"    : "~3.4.1",
+    "redis"           : "~2.6.1"
   },
   "devDependencies": {
     "coveralls"     : "~2.11.9",

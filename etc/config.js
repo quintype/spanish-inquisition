@@ -2,8 +2,9 @@
 
 var config = {
   redis: {
-    host: "127.0.0.1",
-    port: 6379
+    "host"           : "127.0.0.1",
+    "port"           : 6379,
+    "connect_timeout": 200
   }
 };
 
