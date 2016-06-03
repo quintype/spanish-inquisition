@@ -7,6 +7,9 @@
     "type": "git",
     "url" : "git://github.com/quintype/spanish-inquisition.git"
   },
+  "engines"        : {
+    "node": "4.4.5"
+  },
   "scripts"        : {
     "test"    : "npm run tests",
     "gulp"    : "./node_modules/.bin/gulp",
