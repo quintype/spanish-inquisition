@@ -30,12 +30,14 @@
     "engine.io"       : "~1.6.9",
     "express"         : "~4.13.4",
     "lodash"          : "~4.13.1",
+    "mocha"           : "~2.5.3",
     "primus"          : "~5.2.1",
     "primus-cluster"  : "~1.1.0",
     "primus-emitter"  : "~3.1.1",
     "primus-multiplex": "~3.2.0",
     "primus-rooms"    : "~3.4.1",
-    "redis"           : "~2.6.1"
+    "redis"           : "~2.6.1",
+    "should"          : "~9.0.0"
   },
   "devDependencies": {
     "coveralls"     : "~2.11.9",
@@ -47,8 +49,6 @@
     "jshint"        : "~2.9.2",
     "jshint-stylish": "~2.2.0",
     "mkdirp"        : "~0.5.1",
-    "mocha"         : "~2.5.3",
-    "should"        : "~9.0.0",
     "uglifyjs"      : "~2.4.10"
   }
 }
