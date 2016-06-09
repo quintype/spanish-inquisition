@@ -30,6 +30,7 @@
     "engine.io"       : "~1.6.9",
     "express"         : "~4.13.4",
     "lodash"          : "~4.13.1",
+    "mkdirp"          : "~0.5.1",
     "mocha"           : "~2.5.3",
     "primus"          : "~5.2.1",
     "primus-cluster"  : "~1.1.0",
@@ -48,7 +49,6 @@
     "jscs"          : "~3.0.3",
     "jshint"        : "~2.9.2",
     "jshint-stylish": "~2.2.0",
-    "mkdirp"        : "~0.5.1",
     "uglifyjs"      : "~2.4.10"
   }
 }
