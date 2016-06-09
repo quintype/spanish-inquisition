@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+output="$1"
+
+if [ -z "$output" ]; then
+  echo "Usage: $0 /path/to/output.tar"
+  exit -1
+fi
+
+rm -rf output
+mkdir -p output
+
+git archive HEAD | tar x -C output
+cd output
+npm install
+cd ..
+tar cf $output -C output .
+rm -rf output
