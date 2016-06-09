@@ -1,0 +1,12 @@
+#! /bin/sh
+
+CURRENTPATH="$(cd "$(dirname "$0")" && pwd -P)"
+cd $CURRENTPATH
+export PORT=10001
+export NODE_ENV=production
+
+if [ -n "$LOG4J_CONF" ]; then
+  LOG4J_OPTS="-Dlog4j.configurationFile=file:${LOG4J_CONF}"
+fi
+
+node $CURRENTPATH/bin/server
